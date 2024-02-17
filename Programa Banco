@@ -1,0 +1,68 @@
+int opcao, opcao2, verifs2;
+double saldo, saqus, deposito;
+String verif = "Depende";
+String verif2;
+int verifs = 123;
+
+Console.WriteLine("Qual a sua conta?");
+opcao = Convert.ToInt32(Console.ReadLine());
+
+switch (opcao)
+{
+
+    case 1:
+
+        saldo = 1700;
+
+        Console.WriteLine("Seu saldo é de $R" + saldo);
+        Console.WriteLine("Quais operações você quer fazer? []1. Saque [] 2. Deposito[] ");
+        opcao2 = Convert.ToInt32(Console.ReadLine());
+        switch (opcao2)
+        {
+            case 1:
+                Console.WriteLine("Para fazer o sque verifique se você é humano;");
+                verif2 = Console.ReadLine();
+                Console.WriteLine("Digite a senha");
+                verifs2 = Convert.ToInt32(Console.ReadLine());
+                if (verif2 == verif && verifs2 == verifs)
+                {
+
+                    Console.WriteLine("Verificação feita. Quanto que sacar");
+
+                }
+                else
+                {
+                    Console.WriteLine("Login falhou");
+                    Environment.Exit(0);
+
+                }
+
+                saqus = Convert.ToDouble(Console.ReadLine());
+                double saldo2 = saldo - saqus;
+                Console.WriteLine("Seu saque foi feito! Seu saldo agora é R$" + saldo2);
+
+
+                break;
+
+            case 2:
+
+
+                Console.WriteLine("Para depositar Verifique se você é humano;");
+
+
+
+                break;
+
+
+        }
+
+
+        break;
+
+    case 2:
+
+        break;
+
+
+
+}
